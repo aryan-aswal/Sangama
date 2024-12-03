@@ -3,7 +3,7 @@ import image_1 from '../assets/auth_page_image_1.jpg';
 import image_2 from '../assets/auth_page_image_2.jpg';
 import image_3 from '../assets/auth_page_image_3.jpg';
 import image_4 from '../assets/auth_page_image_4.png';
-import LoginForm from '../components/AuthTemplatePage/loginForm';
+import LoginForm from '../components/AuthTemplatePage/LoginForm';
 import SignupForm from '../components/AuthTemplatePage/SignupForm';
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
