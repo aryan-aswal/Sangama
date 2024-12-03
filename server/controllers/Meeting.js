@@ -41,7 +41,7 @@ const createToken = async (req, res) => {
             privilegeExpireTimestamp
         );
 
-        const meetingLink = `http://localhost:5173/meeting/${channel}/${uuidv4()}`;
+        const meetingLink = `https://sangama-navy.vercel.app/meeting/${channel}/${uuidv4()}`;
 
         const meetingDetails = await Meeting.create({ room_name: channel, room_token: token, meeting_link: meetingLink, admin: userId, participants: [userId] });
         await User.findByIdAndUpdate(userId, { meeting: meetingDetails._id });
@@ -69,7 +69,7 @@ const fetchMeetingDetails = async (req, res) => {
                 message: "Please provide required details"
             })
         }
-        const meetingLink = `http://localhost:5173/meeting/${channel}/${uid}`;
+        const meetingLink = `https://sangama-navy.vercel.app/meeting/${channel}/${uid}`;
         const meetingDetails = await Meeting.findOne({ meeting_link: meetingLink })
             .populate('admin')
             .populate('participants');

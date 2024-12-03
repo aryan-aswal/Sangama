@@ -92,7 +92,7 @@ const otpTemplate = (otp) => {
 				<div class="otp">${otp}</div>
 				<p>This OTP is valid for <strong>5 minutes</strong>. If you did not request this verification, please ignore this email.</p>
 			</div>
-			<a href="https://sangama.com" class="cta">Visit Sangama</a>
+			<a href="https://sangama-navy.vercel.app" class="cta">Visit Sangama</a>
 			<div class="support">Need help? Contact us at <a href="mailto:support@sangama.com">support@sangama.com</a>.</div>
 			<div class="footer">© 2024 Sangama. All rights reserved.</div>
 		</div>

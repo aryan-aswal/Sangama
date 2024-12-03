@@ -10,7 +10,6 @@ const ChatComponent = ({ messages, setMessages }) => {
     const { channel, uid } = useParams();
     const socketRef = useRef(null); // Persistent socket reference
     const [message, setMessage] = useState('');
-    console.log(SOCKET_IO_URL);
     useEffect(() => {
         // Initialize socket only if it doesn't already exist
         if (!socketRef.current) {
@@ -47,7 +46,7 @@ const ChatComponent = ({ messages, setMessages }) => {
         e.preventDefault();
         const data = {
             message,
-            meetingLink: `http://localhost:5173/meeting/${channel}/${uid}`,
+            meetingLink: `https://sangama-navy.vercel.app/meeting/${channel}/${uid}`,
         };
         if (socketRef.current) {
             socketRef.current.emit('message', data);
